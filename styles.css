@@ -1,0 +1,547 @@
+:root {
+    --bg-color: #0A0A0A;
+    --section-bg: #151515;
+    --text-color: #E6E6E6;
+    --text-secondary: #A0A0A0;
+    --accent-color: #2D5F7C;
+    --border-color: #252525;
+    --transition: all 0.3s ease;
+    --padding: 0.75rem;
+    /* Reutilizável para o padding */
+    --margin: 1rem;
+    /* Reutilizável para o margin */
+    --title-margin: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* Espaçamento homogêneo entre imagem e informações */
+    margin-bottom: var(--margin);
+    margin-bottom: 4rem;
+    /* Distância de 1rem para a próxima seção */
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.profile-img:hover {
+    filter: grayscale(0%);
+    border-color: var(--accent-color);
+}
+
+.profile-info {
+    color: var(--text-color);
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.secondary-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: .6rem;
+}
+
+.quick-info {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    display: flex;
+    gap: 2rem;
+    /* Espaçamento homogêneo entre informações */
+    margin-top: 1rem;
+}
+
+.quick-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Espaçamento entre ícone e texto */
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    /* Levemente espaçado para melhorar a leitura */
+    margin: 0 auto;
+    /* Centraliza o texto dentro do contêiner */
+}
+
+.about-section,
+.academic-section,
+.courses-section,
+.skills-section {
+    background-color: var(--section-bg);
+    padding: var(--padding);
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    margin-bottom: var(--section-spacing);
+    transition: var(--transition);
+}
+
+.about-section:hover,
+.academic-section:hover,
+.courses-section:hover,
+.skills-section:hover {
+    border-color: var(--accent-color);
+}
+
+.about-section {
+    background-color: var(--section-bg);
+    padding: var(--padding);
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    margin-bottom: var(--margin);
+    /* Distância de 1rem para a próxima seção */
+    margin-bottom: 4rem;
+    transition: var(--transition);
+}
+
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo do título */
+}
+
+.sub-section {
+    background-color: var(--bg-color);
+    /* Mantém a seção sem fundo */
+    padding: var(--padding);
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.sub-section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.sub-section-sub-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.academic-section {
+    background-color: var(--section-bg);
+    padding: var(--padding);
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    margin-bottom: var(--margin);
+    /* Distância de 1rem para a próxima seção */
+    margin-bottom: 4rem;
+    transition: var(--transition);
+}
+
+
+.academic-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    margin-top: 1rem;
+    width: 100%;
+    /* Define a largura total da barra */
+    background-color: #ddd;
+    /* Cor de fundo da barra */
+    border-radius: 5px;
+    /* Borda arredondada */
+    overflow: hidden;
+    /* Garante que o conteúdo não "vaze" fora da borda */
+    height: 0.35rem;
+    /* Altura da barra */
+}
+
+.progress {
+    height: 100%;
+    /* Preenche a altura da barra */
+    background-color: var(--accent-color);
+    /* Cor da barra de progresso */
+    width: 70%;
+    /* Progresso atual, ajustável */
+    transition: width 0.3s ease;
+    /* Animação para suavizar o progresso */
+    border-radius: 5px 0 0 5px;
+    /* Arredonda somente o início da barra */
+}
+
+.progress-data{
+    margin-top: .575rem;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.courses-section {
+    background-color: var(--section-bg);
+    padding : var(--padding);
+    border-radius: 3px;
+    border: 2px solid var(--border-color);
+    margin-bottom: var(--margin);
+    /* Distância de 1rem para a próxima seção */
+    margin-bottom: 4rem;
+    transition: var(--transition);
+}
+
+
+.courses-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-link {
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: var(--text-color);
+    transition: var(--transition);
+
+}
+
+.text-link:hover {
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: var(--accent-color);
+
+}
+
+.skills-section {
+    background-color: var(--section-bg); /* Fundo da seção */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 2px solid var(--border-color); /* Borda da seção */
+    margin-bottom: 4rem; /* Espaçamento abaixo da seção */
+    transition: var(--transition); /* Transição suave */
+    max-width: 1000px; /* Limita a largura máxima da seção */
+    margin-left: auto; /* Centraliza a seção */
+    margin-right: auto; /* Centraliza a seção */
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: row; /* Direção das colunas */
+    align-items: center; /* Alinhamento central */
+    justify-content: center; /* Centraliza as habilidades */
+    text-align: center; /* Centraliza o texto */
+    gap: 2rem; /* Espaçamento entre as habilidades */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+}
+
+.skill-icon {
+    width: 40px; /* Tamanho consistente dos ícones */
+    height: 40px;
+    object-fit: contain; /* Garante que o ícone não deforme */
+    transition: transform 0.2s; /* Transição suave para o efeito de hover */
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); /* Aumenta um pouco o ícone ao passar o mouse */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Direção vertical */
+    align-items: center; /* Centraliza os itens */
+    padding: 1rem; /* Espaçamento interno */
+    width: 100px; /* Largura fixa do item */
+    height: 100px; /* Altura fixa do item */
+    transition: background-color 0.3s; /* Transição para mudança de fundo */
+    border-radius: 3px; /* Bordas arredondadas para o item */
+
+}
+
+.skill-text {
+    color: var(--text-secondary); /* Cor do texto secundário */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin-top: 0.5rem; /* Espaço acima do texto */
+}
+
+.skill-item:hover .skill-text {
+    color: var(--accent-color); /* Muda a cor do texto ao passar o mouse */
+}
+
+
+footer {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-img {
+        width: 150px; /* Ajustar a largura da imagem do perfil */
+        height: 150px; /* Ajustar a altura da imagem do perfil */
+    }
+
+    .main-title {
+        font-size: 1.5rem; /* Reduzir o tamanho do título principal */
+        justify-self: center;
+    }
+
+    .secondary-title {
+        font-size: 1.2rem; /* Reduzir o tamanho do título secundário */
+        justify-self: center;
+    }
+
+    .quick-info {
+        font-size: 0.9rem; /* Reduzir o tamanho do texto secundário */
+        justify-self: center;
+    }
+
+    .section-title {
+        font-size: 1.3rem; /* Reduzir o tamanho dos títulos das seções */
+    }
+
+    .text {
+        font-size: 0.9rem; /* Reduzir o tamanho do texto */
+    }
+
+    .progress-data{
+        margin-top: .55rem;
+        font-size: .75rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Títulos */
+    .main-title {
+        font-size: 1.6rem; /* Aumento para maior legibilidade */
+    }
+
+    .secondary-title {
+        font-size: 1.3rem; /* Leve aumento para não sobrecarregar */
+    }
+
+    .section-title {
+        font-size: 1.1rem; /* Aumento para maior leveza */
+        margin-bottom: 0.8rem; /* Espaçamento ajustado */
+    }
+
+    .sub-section-title {
+        font-size: 1rem; /* Reduzido para maior leveza */
+    }
+
+    .sub-section-sub-title {
+        font-size: 0.625rem; /* Reduzido para maior leveza */
+    }
+
+    .academic-data {
+        margin-top: .75rem;
+    }
+
+    /* Texto */
+    .text {
+        font-size: 0.8rem; /* Reduzido para melhor legibilidade */
+        line-height: 1.4; /* Ajuste de line-height para melhor leitura */
+    }
+
+    .quick-info {
+        font-size: 0.8rem; /* Redução leve para melhorar a legibilidade */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    /* Imagem do perfil */
+    .profile-img {
+        width: 120px; /* Ajuste da largura da imagem do perfil */
+        height: 120px; /* Ajuste da altura da imagem do perfil */
+        transition: transform 0.2s; /* Transição suave */
+    }
+
+    .profile-img:active {
+        transform: scale(0.95); /* Reduz a imagem ao ser clicada */
+    }
+
+    /* Informações do perfil */
+    .profile-info {
+        text-align: center; /* Mantém o texto do perfil centralizado */
+        margin-top: 0.5rem; /* Redução do espaço acima do texto */
+    }
+
+    /* Habilidades */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Ajuste para maior flexibilidade */
+        gap: 0.5rem; /* Redução do gap para dar menos espaço entre as habilidades */
+        transition: all 0.3s; /* Transição geral para flexbox */
+    }
+
+    .skill-item {
+        transition: background-color 0.3s, transform 0.2s; /* Transições para a animação */
+    }
+
+    .skill-item:active {
+        background-color: rgba(45, 95, 124, 0.3); /* Muda a cor de fundo ao clicar */
+        transform: scale(0.95); /* Diminui um pouco ao ser clicado */
+    }
+
+    .skill-text {
+        font-size: 0.8rem; /* Redução leve para melhorar a legibilidade */
+    }
+
+    /* Links de texto */
+    .text-link {
+        transition: color 0.3s; /* Transição para a cor do texto */
+    }
+
+    .text-link:active {
+        color: var(--accent-color); /* Muda a cor do link ao ser clicado */
+    }
+
+    .progress-data{
+        margin-top: .55rem;
+        font-size: .7rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 620px) {
+    /* Títulos */
+    .main-title {
+        font-size: 1.6rem; /* Aumento para maior legibilidade */
+    }
+
+    .secondary-title {
+        font-size: 1.3rem; /* Leve aumento para não sobrecarregar */
+    }
+
+    .section-title {
+        font-size: 1.1rem; /* Aumento para maior leveza */
+        margin-bottom: 0.8rem; /* Espaçamento ajustado */
+    }
+
+    .sub-section-title {
+        font-size: 1.1rem; /* Aumento para maior leveza */
+    }
+
+    .sub-section-sub-title {
+        font-size: 0.75rem; /* Aumento para maior leveza */
+    }
+
+    .academic-data {
+        margin-top: 1rem; /* Aumento do espaço acima dos dados acadêmicos */
+    }
+
+    /* Texto */
+    .text {
+        font-size: 0.9rem; /* Aumento para melhor legibilidade */
+        line-height: 1.4; /* Ajuste de line-height para melhor leitura */
+    }
+
+    .quick-info {
+        font-size: 0.9rem; /* Aumento leve para melhorar a legibilidade */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    /* Imagem do perfil */
+    .profile-img {
+        width: 140px; /* Ajuste da largura da imagem do perfil */
+        height: 140px; /* Ajuste da altura da imagem do perfil */
+        transition: transform 0.2s; /* Transição suave */
+    }
+
+    .profile-img:active {
+        transform: scale(0.95); /* Reduz a imagem ao ser clicada */
+    }
+
+    /* Informações do perfil */
+    .profile-info {
+        text-align: center; /* Mantém o texto do perfil centralizado */
+        margin-top: 0.5rem; /* Redução do espaço acima do texto */
+    }
+
+    /* Habilidades */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajuste para maior flexibilidade */
+        gap: 0.6rem; /* Aumento do gap para dar mais espaço entre as habilidades */
+        transition: all 0.3s; /* Transição geral para flexbox */
+    }
+
+    .skill-item {
+        transition: background-color 0.3s, transform 0.2s; /* Transições para a animação */
+    }
+
+    .skill-item:active {
+        background-color: rgba(45, 95, 124, 0.3); /* Muda a cor de fundo ao clicar */
+        transform: scale(0.95); /* Diminui um pouco ao ser clicado */
+    }
+
+    .skill-text {
+        font-size: 0.9rem; /* Aumento leve para melhorar a legibilidade */
+    }
+
+    /* Links de texto */
+    .text-link {
+        transition: color 0.3s; /* Transição para a cor do texto */
+    }
+
+    .text-link:active {
+        color: var(--accent-color); /* Muda a cor do link ao ser clicado */
+    }
+}
