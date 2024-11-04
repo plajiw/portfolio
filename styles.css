@@ -33,6 +33,11 @@ body {
     padding: 4rem 2rem;
 }
 
+.btn-theme {
+    border-radius: 100%;
+    background-color: var(--accent-color);
+}
+
 .profile-section {
     display: flex;
     align-items: center;
