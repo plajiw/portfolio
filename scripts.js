@@ -1,17 +1,30 @@
-const themeSwitch = document.getElementById('theme-switch');
-
-themeSwitch.addEventListener('change', () => {
-  if (themeSwitch.checked) {
-    document.documentElement.style.setProperty('--bg-color', 'var(--light-bg-color)');
-    document.documentElement.style.setProperty('--section-bg', 'var(--light-section-bg)');
-    document.documentElement.style.setProperty('--text-color', 'var(--light-text-color)');
-    document.documentElement.style.setProperty('--text-secondary', 'var(--light-text-secondary)');
-    document.documentElement.style.setProperty('--border-color', 'var(--light-border-color)');
+document.addEventListener('DOMContentLoaded', () => {
+  const themeSwitch = document.querySelector('.theme-switch');
+  
+  // Verifica se há um tema salvo no localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeSwitch.classList.remove('dark');
   } else {
-    document.documentElement.style.setProperty('--bg-color', '#0A0A0A');
-    document.documentElement.style.setProperty('--section-bg', '#151515');
-    document.documentElement.style.setProperty('--text-color', '#E6E6E6');
-    document.documentElement.style.setProperty('--text-secondary', '#A0A0A0');
-    document.documentElement.style.setProperty('--border-color', '#252525');
+      themeSwitch.classList.add('dark');
   }
+
+  // Função para alternar o tema
+  function toggleTheme() {
+      if (themeSwitch.classList.contains('dark')) {
+          // Mudar para tema claro
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+          themeSwitch.classList.remove('dark');
+      } else {
+          // Mudar para tema escuro
+          document.documentElement.setAttribute('data-theme', '');
+          localStorage.setItem('theme', 'dark');
+          themeSwitch.classList.add('dark');
+      }
+  }
+
+  // Adiciona o evento de clique ao botão
+  themeSwitch.addEventListener('click', toggleTheme);
 });
