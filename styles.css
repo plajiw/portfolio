@@ -37,7 +37,7 @@ body {
     color: var(--text-color);
     border: none;
     padding: 1rem 2rem;
-    transform: translate();
+    transform: translate(400px, 0, 0);
 }
 
 .profile-section {
