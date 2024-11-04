@@ -203,11 +203,11 @@ body {
     /* Arredonda somente o início da barra */
 }
 
-.progress-data{
+.progress-data {
     margin-top: .575rem;
     font-size: 1rem;
     color: var(--text-secondary);
-    font-weight: 400;   
+    font-weight: 400;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -216,7 +216,7 @@ body {
 
 .courses-section {
     background-color: var(--section-bg);
-    padding : var(--padding);
+    padding: var(--padding);
     border-radius: 3px;
     border: 2px solid var(--border-color);
     margin-bottom: var(--margin);
@@ -230,6 +230,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.certificate {
+    background-color: var(--accent-color);
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 3px;
+    padding: .25rem .5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.certificate:hover{
+    box-shadow: 0 0 10px var(--accent-color); /* Efeito glow branco */
 }
 
 .text-link {
@@ -248,58 +263,88 @@ body {
 }
 
 .skills-section {
-    background-color: var(--section-bg); /* Fundo da seção */
-    padding: 2rem; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    border: 2px solid var(--border-color); /* Borda da seção */
-    margin-bottom: 4rem; /* Espaçamento abaixo da seção */
-    transition: var(--transition); /* Transição suave */
-    max-width: 1000px; /* Limita a largura máxima da seção */
-    margin-left: auto; /* Centraliza a seção */
-    margin-right: auto; /* Centraliza a seção */
+    background-color: var(--section-bg);
+    /* Fundo da seção */
+    padding: 2rem;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    border: 2px solid var(--border-color);
+    /* Borda da seção */
+    margin-bottom: 4rem;
+    /* Espaçamento abaixo da seção */
+    transition: var(--transition);
+    /* Transição suave */
+    max-width: 1000px;
+    /* Limita a largura máxima da seção */
+    margin-left: auto;
+    /* Centraliza a seção */
+    margin-right: auto;
+    /* Centraliza a seção */
 }
 
 .skills-grid {
     display: flex;
-    flex-direction: row; /* Direção das colunas */
-    align-items: center; /* Alinhamento central */
-    justify-content: center; /* Centraliza as habilidades */
-    text-align: center; /* Centraliza o texto */
-    gap: 2rem; /* Espaçamento entre as habilidades */
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    flex-direction: row;
+    /* Direção das colunas */
+    align-items: center;
+    /* Alinhamento central */
+    justify-content: center;
+    /* Centraliza as habilidades */
+    text-align: center;
+    /* Centraliza o texto */
+    gap: 2rem;
+    /* Espaçamento entre as habilidades */
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a próxima linha */
 }
 
 .skill-icon {
-    width: 40px; /* Tamanho consistente dos ícones */
+    width: 40px;
+    /* Tamanho consistente dos ícones */
     height: 40px;
-    object-fit: contain; /* Garante que o ícone não deforme */
-    transition: transform 0.2s; /* Transição suave para o efeito de hover */
+    object-fit: contain;
+    /* Garante que o ícone não deforme */
+    transition: transform 0.2s;
+    /* Transição suave para o efeito de hover */
 }
 
 .skill-icon:hover {
-    transform: scale(1.1); /* Aumenta um pouco o ícone ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta um pouco o ícone ao passar o mouse */
 }
 
 .skill-item {
     display: flex;
-    flex-direction: column; /* Direção vertical */
-    align-items: center; /* Centraliza os itens */
-    padding: 1rem; /* Espaçamento interno */
-    width: 100px; /* Largura fixa do item */
-    height: 100px; /* Altura fixa do item */
-    transition: background-color 0.3s; /* Transição para mudança de fundo */
-    border-radius: 3px; /* Bordas arredondadas para o item */
+    flex-direction: column;
+    /* Direção vertical */
+    align-items: center;
+    /* Centraliza os itens */
+    padding: 1rem;
+    /* Espaçamento interno */
+    width: 100px;
+    /* Largura fixa do item */
+    height: 100px;
+    /* Altura fixa do item */
+    transition: background-color 0.3s;
+    /* Transição para mudança de fundo */
+    border-radius: 3px;
+    /* Bordas arredondadas para o item */
 
 }
 
 .skill-text {
-    color: var(--text-secondary); /* Cor do texto secundário */
-    font-size: 1rem; /* Tamanho da fonte */
-    margin-top: 0.5rem; /* Espaço acima do texto */
+    color: var(--text-secondary);
+    /* Cor do texto secundário */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    margin-top: 0.5rem;
+    /* Espaço acima do texto */
 }
 
 .skill-item:hover .skill-text {
-    color: var(--accent-color); /* Muda a cor do texto ao passar o mouse */
+    color: var(--accent-color);
+    /* Muda a cor do texto ao passar o mouse */
 }
 
 
@@ -324,36 +369,43 @@ footer {
     .profile-section {
         flex-direction: column;
     }
-    
+
     .profile-img {
-        width: 150px; /* Ajustar a largura da imagem do perfil */
-        height: 150px; /* Ajustar a altura da imagem do perfil */
+        width: 150px;
+        /* Ajustar a largura da imagem do perfil */
+        height: 150px;
+        /* Ajustar a altura da imagem do perfil */
     }
 
     .main-title {
-        font-size: 1.5rem; /* Reduzir o tamanho do título principal */
+        font-size: 1.5rem;
+        /* Reduzir o tamanho do título principal */
         justify-self: center;
     }
 
     .secondary-title {
-        font-size: 1.2rem; /* Reduzir o tamanho do título secundário */
+        font-size: 1.2rem;
+        /* Reduzir o tamanho do título secundário */
         justify-self: center;
     }
 
     .quick-info {
-        font-size: 0.9rem; /* Reduzir o tamanho do texto secundário */
+        font-size: 0.9rem;
+        /* Reduzir o tamanho do texto secundário */
         justify-self: center;
     }
 
     .section-title {
-        font-size: 1.3rem; /* Reduzir o tamanho dos títulos das seções */
+        font-size: 1.3rem;
+        /* Reduzir o tamanho dos títulos das seções */
     }
 
     .text {
-        font-size: 0.9rem; /* Reduzir o tamanho do texto */
+        font-size: 0.9rem;
+        /* Reduzir o tamanho do texto */
     }
 
-    .progress-data{
+    .progress-data {
         margin-top: .55rem;
         font-size: .75rem;
         color: var(--text-secondary);
@@ -363,29 +415,40 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+
+    .courses-data {
+        margin-bottom: .25rem;
+    }
 }
 
 @media (max-width: 480px) {
+
     /* Títulos */
     .main-title {
-        font-size: 1.6rem; /* Aumento para maior legibilidade */
+        font-size: 1.6rem;
+        /* Aumento para maior legibilidade */
     }
 
     .secondary-title {
-        font-size: 1.3rem; /* Leve aumento para não sobrecarregar */
+        font-size: 1.3rem;
+        /* Leve aumento para não sobrecarregar */
     }
 
     .section-title {
-        font-size: 1.1rem; /* Aumento para maior leveza */
-        margin-bottom: 0.8rem; /* Espaçamento ajustado */
+        font-size: 1.1rem;
+        /* Aumento para maior leveza */
+        margin-bottom: 0.8rem;
+        /* Espaçamento ajustado */
     }
 
     .sub-section-title {
-        font-size: 1rem; /* Reduzido para maior leveza */
+        font-size: 1rem;
+        /* Reduzido para maior leveza */
     }
 
     .sub-section-sub-title {
-        font-size: 0.625rem; /* Reduzido para maior leveza */
+        font-size: 0.625rem;
+        /* Reduzido para maior leveza */
     }
 
     .academic-data {
@@ -394,62 +457,81 @@ footer {
 
     /* Texto */
     .text {
-        font-size: 0.8rem; /* Reduzido para melhor legibilidade */
-        line-height: 1.4; /* Ajuste de line-height para melhor leitura */
+        font-size: 0.8rem;
+        /* Reduzido para melhor legibilidade */
+        line-height: 1.4;
+        /* Ajuste de line-height para melhor leitura */
     }
 
     .quick-info {
-        font-size: 0.8rem; /* Redução leve para melhorar a legibilidade */
-        align-items: center; /* Centraliza os itens */
+        font-size: 0.8rem;
+        /* Redução leve para melhorar a legibilidade */
+        align-items: center;
+        /* Centraliza os itens */
     }
 
     /* Imagem do perfil */
     .profile-img {
-        width: 120px; /* Ajuste da largura da imagem do perfil */
-        height: 120px; /* Ajuste da altura da imagem do perfil */
-        transition: transform 0.2s; /* Transição suave */
+        width: 120px;
+        /* Ajuste da largura da imagem do perfil */
+        height: 120px;
+        /* Ajuste da altura da imagem do perfil */
+        transition: transform 0.2s;
+        /* Transição suave */
     }
 
     .profile-img:active {
-        transform: scale(0.95); /* Reduz a imagem ao ser clicada */
+        transform: scale(0.95);
+        /* Reduz a imagem ao ser clicada */
     }
 
     /* Informações do perfil */
     .profile-info {
-        text-align: center; /* Mantém o texto do perfil centralizado */
-        margin-top: 0.5rem; /* Redução do espaço acima do texto */
+        text-align: center;
+        /* Mantém o texto do perfil centralizado */
+        margin-top: 0.5rem;
+        /* Redução do espaço acima do texto */
     }
 
     /* Habilidades */
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Ajuste para maior flexibilidade */
-        gap: 0.5rem; /* Redução do gap para dar menos espaço entre as habilidades */
-        transition: all 0.3s; /* Transição geral para flexbox */
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        /* Ajuste para maior flexibilidade */
+        gap: 0.5rem;
+        /* Redução do gap para dar menos espaço entre as habilidades */
+        transition: all 0.3s;
+        /* Transição geral para flexbox */
     }
 
     .skill-item {
-        transition: background-color 0.3s, transform 0.2s; /* Transições para a animação */
+        transition: background-color 0.3s, transform 0.2s;
+        /* Transições para a animação */
     }
 
     .skill-item:active {
-        background-color: rgba(45, 95, 124, 0.3); /* Muda a cor de fundo ao clicar */
-        transform: scale(0.95); /* Diminui um pouco ao ser clicado */
+        background-color: rgba(45, 95, 124, 0.3);
+        /* Muda a cor de fundo ao clicar */
+        transform: scale(0.95);
+        /* Diminui um pouco ao ser clicado */
     }
 
     .skill-text {
-        font-size: 0.8rem; /* Redução leve para melhorar a legibilidade */
+        font-size: 0.8rem;
+        /* Redução leve para melhorar a legibilidade */
     }
 
     /* Links de texto */
     .text-link {
-        transition: color 0.3s; /* Transição para a cor do texto */
+        transition: color 0.3s;
+        /* Transição para a cor do texto */
     }
 
     .text-link:active {
-        color: var(--accent-color); /* Muda a cor do link ao ser clicado */
+        color: var(--accent-color);
+        /* Muda a cor do link ao ser clicado */
     }
 
-    .progress-data{
+    .progress-data {
         margin-top: .55rem;
         font-size: .7rem;
         color: var(--text-secondary);
@@ -462,86 +544,123 @@ footer {
 }
 
 @media (max-width: 620px) {
+
     /* Títulos */
     .main-title {
-        font-size: 1.6rem; /* Aumento para maior legibilidade */
+        font-size: 1.6rem;
+        /* Aumento para maior legibilidade */
     }
 
     .secondary-title {
-        font-size: 1.3rem; /* Leve aumento para não sobrecarregar */
+        font-size: 1.3rem;
+        /* Leve aumento para não sobrecarregar */
     }
 
     .section-title {
-        font-size: 1.1rem; /* Aumento para maior leveza */
-        margin-bottom: 0.8rem; /* Espaçamento ajustado */
+        font-size: 1.1rem;
+        /* Aumento para maior leveza */
+        margin-bottom: 0.8rem;
+        /* Espaçamento ajustado */
     }
 
     .sub-section-title {
-        font-size: 1.1rem; /* Aumento para maior leveza */
+        font-size: 1.1rem;
+        /* Aumento para maior leveza */
     }
 
     .sub-section-sub-title {
-        font-size: 0.75rem; /* Aumento para maior leveza */
+        font-size: 0.75rem;
+        /* Aumento para maior leveza */
     }
 
     .academic-data {
-        margin-top: 1rem; /* Aumento do espaço acima dos dados acadêmicos */
+        margin-top: .8rem;
+        /* Aumento do espaço acima dos dados acadêmicos */
+    }
+
+    .certificate {
+        background-color: var(--accent-color);
+        text-decoration: none;
+        color: var(--text-color);
+        border-radius: 3px;
+        padding: .1rem .2rem;
+        font-size: .75rem;
+
     }
 
     /* Texto */
     .text {
-        font-size: 0.9rem; /* Aumento para melhor legibilidade */
-        line-height: 1.4; /* Ajuste de line-height para melhor leitura */
+        font-size: 0.9rem;
+        /* Aumento para melhor legibilidade */
+        line-height: 1.4;
+        /* Ajuste de line-height para melhor leitura */
     }
 
     .quick-info {
-        font-size: 0.9rem; /* Aumento leve para melhorar a legibilidade */
-        align-items: center; /* Centraliza os itens */
+        font-size: 0.9rem;
+        /* Aumento leve para melhorar a legibilidade */
+        align-items: center;
+        /* Centraliza os itens */
     }
 
     /* Imagem do perfil */
     .profile-img {
-        width: 140px; /* Ajuste da largura da imagem do perfil */
-        height: 140px; /* Ajuste da altura da imagem do perfil */
-        transition: transform 0.2s; /* Transição suave */
+        width: 140px;
+        /* Ajuste da largura da imagem do perfil */
+        height: 140px;
+        /* Ajuste da altura da imagem do perfil */
+        transition: transform 0.2s;
+        /* Transição suave */
     }
 
     .profile-img:active {
-        transform: scale(0.95); /* Reduz a imagem ao ser clicada */
+        transform: scale(0.95);
+        /* Reduz a imagem ao ser clicada */
     }
 
     /* Informações do perfil */
     .profile-info {
-        text-align: center; /* Mantém o texto do perfil centralizado */
-        margin-top: 0.5rem; /* Redução do espaço acima do texto */
+        text-align: center;
+        /* Mantém o texto do perfil centralizado */
+        margin-top: 0.5rem;
+        /* Redução do espaço acima do texto */
     }
 
     /* Habilidades */
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajuste para maior flexibilidade */
-        gap: 0.6rem; /* Aumento do gap para dar mais espaço entre as habilidades */
-        transition: all 0.3s; /* Transição geral para flexbox */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        /* Ajuste para maior flexibilidade */
+        gap: 0.6rem;
+        /* Aumento do gap para dar mais espaço entre as habilidades */
+        transition: all 0.3s;
+        /* Transição geral para flexbox */
     }
 
     .skill-item {
-        transition: background-color 0.3s, transform 0.2s; /* Transições para a animação */
+        transition: background-color 0.3s, transform 0.2s;
+        /* Transições para a animação */
     }
 
     .skill-item:active {
-        background-color: rgba(45, 95, 124, 0.3); /* Muda a cor de fundo ao clicar */
-        transform: scale(0.95); /* Diminui um pouco ao ser clicado */
+        background-color: rgba(45, 95, 124, 0.3);
+        /* Muda a cor de fundo ao clicar */
+        transform: scale(0.95);
+        /* Diminui um pouco ao ser clicado */
     }
 
     .skill-text {
-        font-size: 0.9rem; /* Aumento leve para melhorar a legibilidade */
+        font-size: 0.9rem;
+        /* Aumento leve para melhorar a legibilidade */
     }
 
     /* Links de texto */
     .text-link {
-        transition: color 0.3s; /* Transição para a cor do texto */
+        transition: color 0.3s;
+        /* Transição para a cor do texto */
     }
 
     .text-link:active {
-        color: var(--accent-color); /* Muda a cor do link ao ser clicado */
+        color: var(--accent-color);
+        /* Muda a cor do link ao ser clicado */
     }
 }
