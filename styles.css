@@ -36,6 +36,8 @@ body {
 .btn-theme {
     border-radius: 100%;
     background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
 }
 
 .profile-section {
