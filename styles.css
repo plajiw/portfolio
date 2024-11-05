@@ -27,7 +27,7 @@ body {
 
 /* CSS - Adicione ao seu styles.css */
 .theme-toggle {
-    position: fixed;
+    position: absolute;
     top: 1rem;
     right: 1rem;
     z-index: 1000;
@@ -438,6 +438,13 @@ footer {
         flex-direction: column;
     }
 
+    .theme-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+
     .profile-img {
         width: 150px;
         /* Ajustar a largura da imagem do perfil */
@@ -649,7 +656,7 @@ footer {
     .certificate {
         background-color: var(--accent-color);
         text-decoration: none;
-        color: var(--text-color);
+        color: #E6E6E6;;
         border-radius: 3px;
         padding: .1rem .2rem;
         font-size: .75rem;
