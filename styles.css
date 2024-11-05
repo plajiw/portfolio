@@ -168,7 +168,6 @@ body {
     border-radius: 8px;
     border: 2px solid var(--border-color);
     margin-bottom: var(--section-spacing);
-    transition: var(--transition);
 }
 
 .about-section:hover,
@@ -176,6 +175,7 @@ body {
 .courses-section:hover,
 .skills-section:hover {
     border-color: var(--accent-color);
+    transition: var(--transition);
 }
 
 .about-section {
@@ -298,6 +298,15 @@ body {
     color: #E6E6E6;
     border-radius: 3px;
     padding: .25rem .5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.no-certificate
+{
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: 3px;
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -645,6 +654,15 @@ footer {
         padding: .1rem .2rem;
         font-size: .75rem;
 
+    }
+
+    .no-certificate
+    {
+        text-decoration: none;
+        color: var(--text-secondary);
+        border-radius: 3px;
+        font-size: .75rem;
+        transition: var(--transition);
     }
 
     /* Texto */
